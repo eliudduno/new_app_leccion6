@@ -7,7 +7,7 @@ import time
 if 'experiment_no' not in st.session_state:
     st.session_state['experiment_no'] = 0
 if 'df_experiment_result' not in st.session_state:
-    st.session_state['df_experiment_result'] = pd.DataFrame(columns=['no', 'iteraciones', 'media'])
+    st.session_state['df_experiment_result'] = pd.DataFrame(columns=['no', 'iterations', 'media'])
 
 
 st.header('Lanzar una moneda')
@@ -41,7 +41,7 @@ if start_button:
     st.write(f'Experimento con {number_of_trials} intentos en curso.')
     st.session_state['experiment_no'] += 1
     mean = toss_coin(number_of_trials)
-    st.session_state['df_experiment_result'] = pd.concat([st.session_state['df_experiment_result'], pd.DataFrame(data=[[st.session_state['experiment_no'], number_of_trials, mean]], columns=['no', 'iteraciones', 'mean'])], axis=0)
+    st.session_state['df_experiment_result'] = pd.concat([st.session_state['df_experiment_result'], pd.DataFrame(data=[[st.session_state['experiment_no'], number_of_trials, mean]], columns=['no', 'iterations', 'mean'])], axis=0)
     st.session_state['df_experiment_result'] = st.session_state['df_experiment_result'].reset_index(drop=True)
 
 
