@@ -31,7 +31,7 @@ def toss_coin(n): # funcion que emula el lanzamiento de una moneda
     
     return mean
 
-st.write('Esta aplicación aún no es funcional. En construcción.')
+#st.write('Esta aplicación aún no es funcional. En construcción.')
 
 number_of_trials = st.slider('¿Numero de intentos?',1,1000,10)
 start_button = st.button('Ejecutar')
